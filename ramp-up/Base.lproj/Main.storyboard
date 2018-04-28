@@ -21,12 +21,25 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dih-5A-5KE">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffb-Xu-56f">
+                                <rect key="frame" x="258" y="586" width="107" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="107" id="G6O-Ii-B2K"/>
+                                    <constraint firstAttribute="height" constant="71" id="mPi-L8-vrm"/>
+                                </constraints>
+                                <state key="normal" image="rampIcon"/>
+                                <connections>
+                                    <action selector="onRampBtnPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Mlz-rX-7jk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3g5-KG-CTn" firstAttribute="trailing" secondItem="Dih-5A-5KE" secondAttribute="trailing" id="N1e-gX-Ria"/>
                             <constraint firstItem="Dih-5A-5KE" firstAttribute="leading" secondItem="3g5-KG-CTn" secondAttribute="leading" id="RsM-rK-ZAR"/>
+                            <constraint firstItem="3g5-KG-CTn" firstAttribute="trailing" secondItem="Ffb-Xu-56f" secondAttribute="trailing" constant="10" id="Utl-53-mAB"/>
                             <constraint firstItem="Dih-5A-5KE" firstAttribute="top" secondItem="3g5-KG-CTn" secondAttribute="top" id="dCG-0z-C3c"/>
+                            <constraint firstItem="3g5-KG-CTn" firstAttribute="bottom" secondItem="Ffb-Xu-56f" secondAttribute="bottom" constant="10" id="toh-pH-u9o"/>
                             <constraint firstItem="3g5-KG-CTn" firstAttribute="bottom" secondItem="Dih-5A-5KE" secondAttribute="bottom" id="yLn-aq-or3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3g5-KG-CTn"/>
@@ -39,4 +52,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="rampIcon" width="107" height="71"/>
+    </resources>
 </document>
