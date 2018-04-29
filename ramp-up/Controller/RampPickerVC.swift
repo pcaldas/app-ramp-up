@@ -32,6 +32,8 @@ class RampPickerVC: UIViewController {
         view.insertSubview(sceneView, at: 0)
         
         preferredContentSize = size
+        view.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        view.layer.borderWidth = 3.0
         
         let scene = SCNScene(named: "art.scnassets/ramps.scn")!
         sceneView.scene = scene
@@ -41,6 +43,7 @@ class RampPickerVC: UIViewController {
         scene.rootNode.camera = camera
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(RampPickerVC.handleTap(_:)))
+        sceneView.addGestureRecognizer(tap)
         
         let pipe = Ramp.getPipe()
         Ramp.startRotation(node: pipe)
@@ -61,6 +64,7 @@ class RampPickerVC: UIViewController {
         if hitResults.count > 0 {
             let node = hitResults[0].node
             rampPlacerVC.onRampSelected(node.name!)
+            dismiss(animated: true, completion: nil)
         }
     }
 
